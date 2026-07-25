@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars - Silkroad Private Server</title>
+    <!-- ربط ملف الستايل الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط القائمة العلوية -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Main Page</a></li>
+            <li><a href="#" id="nav-download">Download</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Info</a></li>
+        </ul>
+        <!-- زرار مموه وذكي كأنه لوجن عادي للاعبين -->
+        <button class="user-btn" id="login-trigger-btn">🔑 Login</button>
+    </nav>
+
+    <!-- اسم اللوجو في النص فوق البوابة بالظبط -->
+    <div class="hero">
+        <h1 class="main-logo-text">Mars</h1>
+    </div>
+
+    <div class="container">
+        <!-- شبكة الإحصائيات والمعلومات -->
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="card-title">Top Players</div>
+                <div class="ranking-item"><span class="name">1. Elfsun</span><span class="details">🛡️</span></div>
+                <div class="ranking-item"><span class="name">2. Sivo</span><span class="details">🛡️</span></div>
+                <div class="ranking-item"><span class="name">3. SpadMStorM</span><span class="details">🛡️</span></div>
+            </div>
+
+            <div class="card server-status-card">
+                <h2>SERVER STATUS</h2>
+                <p>Welcome to Mars Server. The ultimate SRO Experience.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Server Time</div>
+                <div class="time-box">08:18:25 PM</div>
+                <div class="info-row">
+                    <span>Players Online:</span>
+                    <span class="online-count">7125</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- سيكشن الداونلود (Download) -->
+        <div class="download-section" id="download-sec">
+            <h2>Game Download</h2>
+            <p>Get ready to enter the battlefield. Download the client below.</p>
+            <button class="download-btn" id="client-download-btn">📥 Download Client (RAR)</button>
+        </div>
+
+        <!-- لوحة التحكم الإدارية -->
+        <div class="admin-panel" id="adminPanel">
+            <h3>🔒 Mars Control Panel</h3>
+            
+            <!-- تحديث الملف -->
+            <div class="admin-section">
+                <p>تحديث ملف اللعبة الحالي:</p>
+                <input type="file" id="gameFile">
+                <button id="upload-btn">حفظ الملف على السيرفر</button>
+            </div>
+            
+            <hr class="panel-divider">
+            
+            <!-- تغيير البيانات -->
+            <div class="admin-section">
+                <p style="color: #f1c40f;">تغيير بيانات مدير السيرفر (Security Settings):</p>
+                <input type="text" id="new-username" placeholder="اسم المستخدم الجديد">
+                <input type="password" id="new-password" placeholder="كلمة المرور الجديدة">
+                <button id="save-settings-btn" style="background: #f1c40f;">تحديث بيانات الدخول</button>
+            </div>
+            
+            <hr class="panel-divider">
+            
+            <!-- تسجيل الخروج -->
+            <div class="admin-section">
+                <button id="logout-btn" style="background: #e74c3c; color: #fff;">🚪 تسجيل الخروج (Logout)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- شاشة تسجيل الدخول المموهة -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h3>Account Login</h3>
+            <input type="text" id="username" placeholder="Username / Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="submit-login">Sign In</button>
+            <button id="close-modal-btn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- ربط ملف الجافا سكريبت الخارجي -->
+    <script src="script.js"></script>
+</body>
+</html>

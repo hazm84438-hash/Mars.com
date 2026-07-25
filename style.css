@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* الخلفية المباشرة والنهائية المأخوذة من رابطك */
+body {
+    color: #ffffff;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(14, 10, 10, 0.4), rgba(7, 5, 15, 0.85)), 
+                url('https://i.postimg.cc/9MDbW38Y/Whats-App-Image-2026-07-19-at-8-44-31-PM.jpg') no-repeat center top fixed;
+    background-size: cover;
+    background-color: #0c080a;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(24, 18, 14, 0.95), rgba(12, 8, 10, 0.9));
+    border-bottom: 2px solid #c5a059;
+    padding: 0 40px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #dfd5c6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 20px 15px;
+    display: block;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #f1c40f;
+    background: rgba(197, 160, 89, 0.08);
+    box-shadow: inset 0 -3px 0 #f1c40f;
+}
+
+.user-btn {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #251c14;
+    padding: 8px 18px;
+    border: 1px solid #c5a059;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.user-btn:hover {
+    background: #c5a059;
+    color: #000;
+}
+
+/* مكان الاسم في النص */
+.hero {
+    text-align: center;
+    padding: 120px 20px 60px 20px;
+}
+
+.main-logo-text {
+    font-size: 85px;
+    color: #f1c40f;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 0 25px rgba(241, 196, 15, 0.7), 4px 4px 0px #000;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { transform: scale(1); text-shadow: 0 0 20px rgba(241, 196, 15, 0.5), 4px 4px 0px #000; }
+    100% { transform: scale(1.02); text-shadow: 0 0 40px rgba(241, 196, 15, 0.9), 4px 4px 0px #000; }
+}
+
+/* Layout Container */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(18, 13, 10, 0.88);
+    border: 1px solid #3a2e1c;
+    border-top: 3px solid #c5a059;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    backdrop-filter: blur(6px);
+}
+
+.card-title {
+    color: #c5a059;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #3a2e1c;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.server-status-card {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.server-status-card h2 {
+    color: #c5a059; 
+    margin-bottom: 10px;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+}
+.ranking-item .name { color: #e0e0e0; }
+.ranking-item .details { color: #c5a059; }
+
+.time-box {
+    background: #3a260c;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    border: 1px solid #c5a059;
+}
+
+.info-row {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.online-count {
+    color: #2ecc71; 
+    font-weight: bold;
+}
+
+/* Download Section */
+.download-section {
+    background: rgba(15, 10, 8, 0.92);
+    border: 2px dashed #c5a059;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.download-section h2 {
+    color: #c5a059;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+.download-section p {
+    margin-top: 10px; 
+    color: #ccc3b5;
+}
+
+.download-btn {
+    background: #c5a059;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.download-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+/* Admin Panel */
+.admin-panel {
+    display: none;
+    background: rgba(20, 16, 12, 0.96);
+    border: 2px solid #2ecc71;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 0 25px rgba(46, 204, 113, 0.2);
+}
+
+.admin-panel h3 {
+    color: #2ecc71; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admin-section {
+    margin: 15px 0;
+}
+
+.admin-section p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.panel-divider {
+    border: 0;
+    height: 1px;
+    background: #3a2e1c;
+    margin: 20px 0;
+}
+
+#gameFile, .admin-section input {
+    color: #fff; 
+    background: #000; 
+    padding: 10px; 
+    border-radius: 4px; 
+    border: 1px solid #3a2e1c;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.admin-section button {
+    background: #2ecc71; 
+    color: #000; 
+    padding: 10px 30px; 
+    border: none; 
+    font-weight: bold; 
+    cursor: pointer; 
+    border-radius: 4px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #140f0b;
+    border: 2px solid #c5a059;
+    padding: 30px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+}
+
+.modal-content h3 {
+    color: #c5a059;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: #000;
+    border: 1px solid #3a2e1c;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.modal-content button {
+    background: #c5a059;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+#close-modal-btn {
+    background: #443a30; 
+    color: #fff;
+    margin-top: 5px;
+}
